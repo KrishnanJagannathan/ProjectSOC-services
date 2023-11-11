@@ -1,0 +1,55 @@
+CREATE TABLE m_user ( 
+id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY ,
+zid varchar UNIQUE,
+name varchar NOT NULL,
+mail_id varchar UNIQUE NOT NULL,
+password varchar NOT NULL,
+is_active boolean NOT NULL
+); 
+
+CREATE TABLE m_role ( 
+id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY ,
+name varchar UNIQUE NOT NULL,
+can_login boolean NOT NULL
+); 
+
+CREATE TABLE map_user_role ( 
+id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY ,
+user_id integer NOT NULL REFERENCES m_user(id),
+role_id integer NOT NULL REFERENCES m_role(id)
+); 
+
+CREATE TABLE m_source_location ( 
+id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY ,
+name varchar UNIQUE NOT NULL
+); 
+
+CREATE TABLE m_destination_location ( 
+id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY ,
+name varchar UNIQUE NOT NULL
+); 
+
+CREATE TABLE m_route ( 
+id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY ,
+source_id integer NOT NULL REFERENCES m_source_location(id),
+destination_id integer NOT NULL REFERENCES m_destination_location(id),
+weekday_list varchar NOT NULL,
+sleeper_bus_id integer NOT NULL,
+semi_bus_id integer NOT NULL
+); 
+
+CREATE TABLE m_bus ( 
+id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY ,
+type varchar NOT NULL,
+reg_no varchar NOT NULL,
+capacity integer NOT NULL
+); 
+
+CREATE TABLE t_ticket ( 
+id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY ,
+user_id integer NOT NULL REFERENCES m_user(id),
+route_id integer NOT NULL REFERENCES m_route(id),
+ticket_number varchar NOT NULL,
+journey_date timestamp(0) NOT NULL
+); 
+
