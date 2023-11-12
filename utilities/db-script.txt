@@ -1,6 +1,5 @@
 CREATE TABLE m_user ( 
 id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY ,
-zid varchar UNIQUE,
 name varchar NOT NULL,
 mail_id varchar UNIQUE NOT NULL,
 password varchar NOT NULL,
