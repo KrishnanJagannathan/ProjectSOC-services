@@ -1,0 +1,292 @@
+
+//class UserController { 
+
+//@GetMapping("/user")
+curl http://localhost:9095/api/user 
+
+//@GetMapping("/user/{id}")
+curl http://localhost:9095/api/user/id 
+
+//@PostMapping("/user")
+curl -X POST -H "Content-Type: application/json" -d '{
+ "name":"",
+ "mailId":"",
+ "password":"",
+ "isActive":"" }' \
+http://localhost:9095/api/user 
+
+//@DeleteMapping("/user/{id}")
+curl -X DELETE http://localhost:9095/api/user/id 
+
+//@PutMapping("/user/{id}")
+curl -X PUT -H "Content-Type: application/json" -d '{
+ "id":"",
+ "name":"",
+ "mailId":"",
+ "password":"",
+ "isActive":"" }' \
+http://localhost:9095/api/user/id 
+
+//@PostMapping("/user-list")
+curl -X POST -H "Content-Type: application/json" -d '[ {
+ "name":"",
+ "mailId":"",
+ "password":"",
+ "isActive":"" }]' \
+http://localhost:9095/api/user-list 
+
+
+
+//class RoleController { 
+
+//@GetMapping("/role")
+curl http://localhost:9095/api/role 
+
+//@GetMapping("/role/{id}")
+curl http://localhost:9095/api/role/id 
+
+//@PostMapping("/role")
+curl -X POST -H "Content-Type: application/json" -d '{
+ "name":"",
+ "canLogin":"" }' \
+http://localhost:9095/api/role 
+
+//@DeleteMapping("/role/{id}")
+curl -X DELETE http://localhost:9095/api/role/id 
+
+//@PutMapping("/role/{id}")
+curl -X PUT -H "Content-Type: application/json" -d '{
+ "id":"",
+ "name":"",
+ "canLogin":"" }' \
+http://localhost:9095/api/role/id 
+
+//@PostMapping("/role-list")
+curl -X POST -H "Content-Type: application/json" -d '[ {
+ "name":"",
+ "canLogin":"" }]' \
+http://localhost:9095/api/role-list 
+
+
+
+//class UserRoleController { 
+
+//@GetMapping("/user-role")
+curl http://localhost:9095/api/user-role 
+
+//@GetMapping("/user-role/{id}")
+curl http://localhost:9095/api/user-role/id 
+
+//@PostMapping("/user-role")
+curl -X POST -H "Content-Type: application/json" -d '{
+ "userId":"",
+ "roleId":"" }' \
+http://localhost:9095/api/user-role 
+
+//@DeleteMapping("/user-role/{id}")
+curl -X DELETE http://localhost:9095/api/user-role/id 
+
+//@PutMapping("/user-role/{id}")
+curl -X PUT -H "Content-Type: application/json" -d '{
+ "id":"",
+ "userId":"",
+ "roleId":"" }' \
+http://localhost:9095/api/user-role/id 
+
+//@GetMapping("/user-role/user-id")
+curl http://localhost:9095/api/user-role/user-id?idList=1 
+
+//@GetMapping("/user-role/role-id")
+curl http://localhost:9095/api/user-role/role-id?idList=1 
+
+//@PostMapping("/user-role-list")
+curl -X POST -H "Content-Type: application/json" -d '[ {
+ "userId":"",
+ "roleId":"" }]' \
+http://localhost:9095/api/user-role-list 
+
+
+
+//class SourceLocationController { 
+
+//@GetMapping("/source-location")
+curl http://localhost:9095/api/source-location 
+
+//@GetMapping("/source-location/{id}")
+curl http://localhost:9095/api/source-location/id 
+
+//@PostMapping("/source-location")
+curl -X POST -H "Content-Type: application/json" -d '{
+ "name":"" }' \
+http://localhost:9095/api/source-location 
+
+//@DeleteMapping("/source-location/{id}")
+curl -X DELETE http://localhost:9095/api/source-location/id 
+
+//@PutMapping("/source-location/{id}")
+curl -X PUT -H "Content-Type: application/json" -d '{
+ "id":"",
+ "name":"" }' \
+http://localhost:9095/api/source-location/id 
+
+//@PostMapping("/source-location-list")
+curl -X POST -H "Content-Type: application/json" -d '[ {
+ "name":"" }]' \
+http://localhost:9095/api/source-location-list 
+
+
+
+//class DestinationLocationController { 
+
+//@GetMapping("/destination-location")
+curl http://localhost:9095/api/destination-location 
+
+//@GetMapping("/destination-location/{id}")
+curl http://localhost:9095/api/destination-location/id 
+
+//@PostMapping("/destination-location")
+curl -X POST -H "Content-Type: application/json" -d '{
+ "name":"" }' \
+http://localhost:9095/api/destination-location 
+
+//@DeleteMapping("/destination-location/{id}")
+curl -X DELETE http://localhost:9095/api/destination-location/id 
+
+//@PutMapping("/destination-location/{id}")
+curl -X PUT -H "Content-Type: application/json" -d '{
+ "id":"",
+ "name":"" }' \
+http://localhost:9095/api/destination-location/id 
+
+//@PostMapping("/destination-location-list")
+curl -X POST -H "Content-Type: application/json" -d '[ {
+ "name":"" }]' \
+http://localhost:9095/api/destination-location-list 
+
+
+
+//class RouteController { 
+
+//@GetMapping("/route")
+curl http://localhost:9095/api/route 
+
+//@GetMapping("/route/{id}")
+curl http://localhost:9095/api/route/id 
+
+//@PostMapping("/route")
+curl -X POST -H "Content-Type: application/json" -d '{
+ "sourceId":"",
+ "destinationId":"",
+ "weekdayList":"",
+ "sleeperBusId":"",
+ "semiBusId":"" }' \
+http://localhost:9095/api/route 
+
+//@DeleteMapping("/route/{id}")
+curl -X DELETE http://localhost:9095/api/route/id 
+
+//@PutMapping("/route/{id}")
+curl -X PUT -H "Content-Type: application/json" -d '{
+ "id":"",
+ "sourceId":"",
+ "destinationId":"",
+ "weekdayList":"",
+ "sleeperBusId":"",
+ "semiBusId":"" }' \
+http://localhost:9095/api/route/id 
+
+//@GetMapping("/route/source-id")
+curl http://localhost:9095/api/route/source-id?idList=1 
+
+//@GetMapping("/route/destination-id")
+curl http://localhost:9095/api/route/destination-id?idList=1 
+
+//@PostMapping("/route-list")
+curl -X POST -H "Content-Type: application/json" -d '[ {
+ "sourceId":"",
+ "destinationId":"",
+ "weekdayList":"",
+ "sleeperBusId":"",
+ "semiBusId":"" }]' \
+http://localhost:9095/api/route-list 
+
+
+
+//class BusController { 
+
+//@GetMapping("/bus")
+curl http://localhost:9095/api/bus 
+
+//@GetMapping("/bus/{id}")
+curl http://localhost:9095/api/bus/id 
+
+//@PostMapping("/bus")
+curl -X POST -H "Content-Type: application/json" -d '{
+ "type":"",
+ "regNo":"",
+ "capacity":"" }' \
+http://localhost:9095/api/bus 
+
+//@DeleteMapping("/bus/{id}")
+curl -X DELETE http://localhost:9095/api/bus/id 
+
+//@PutMapping("/bus/{id}")
+curl -X PUT -H "Content-Type: application/json" -d '{
+ "id":"",
+ "type":"",
+ "regNo":"",
+ "capacity":"" }' \
+http://localhost:9095/api/bus/id 
+
+//@PostMapping("/bus-list")
+curl -X POST -H "Content-Type: application/json" -d '[ {
+ "type":"",
+ "regNo":"",
+ "capacity":"" }]' \
+http://localhost:9095/api/bus-list 
+
+
+
+//class TicketController { 
+
+//@GetMapping("/ticket")
+curl http://localhost:9095/api/ticket 
+
+//@GetMapping("/ticket/{id}")
+curl http://localhost:9095/api/ticket/id 
+
+//@PostMapping("/ticket")
+curl -X POST -H "Content-Type: application/json" -d '{
+ "userId":"",
+ "routeId":"",
+ "ticketNumber":"",
+ "journeyDate":"" }' \
+http://localhost:9095/api/ticket 
+
+//@DeleteMapping("/ticket/{id}")
+curl -X DELETE http://localhost:9095/api/ticket/id 
+
+//@PutMapping("/ticket/{id}")
+curl -X PUT -H "Content-Type: application/json" -d '{
+ "id":"",
+ "userId":"",
+ "routeId":"",
+ "ticketNumber":"",
+ "journeyDate":"" }' \
+http://localhost:9095/api/ticket/id 
+
+//@GetMapping("/ticket/user-id")
+curl http://localhost:9095/api/ticket/user-id?idList=1 
+
+//@GetMapping("/ticket/route-id")
+curl http://localhost:9095/api/ticket/route-id?idList=1 
+
+//@PostMapping("/ticket-list")
+curl -X POST -H "Content-Type: application/json" -d '[ {
+ "userId":"",
+ "routeId":"",
+ "ticketNumber":"",
+ "journeyDate":"" }]' \
+http://localhost:9095/api/ticket-list 
+
+
